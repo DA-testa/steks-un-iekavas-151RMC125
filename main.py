@@ -35,7 +35,6 @@ def main(text):
 
 
 if __name__ == "__main__":
-    print("Input method: ")
     in_met = input()
     if in_met == "I":
         text = input()
