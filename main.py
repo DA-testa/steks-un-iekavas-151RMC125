@@ -37,6 +37,6 @@ def main(x):
 
 if __name__ == "__main__":
     ievads = input()
-    if ievads[0] == "I":
-        x = ievads.strip("I\\r\\n")
+    if ievads.startswith("I"):
+        x = ievads[5:len(ievads)]
         main(x)
