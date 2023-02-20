@@ -36,10 +36,10 @@ def main(text):
 
 if __name__ == "__main__":
     in_met = input()
-    if in_met == "I":
+    if in_met.startswith("I"):
         text = input()
         main(text)
-    elif in_met == "F":
+    elif in_met.startswith("F"):
         print("File path: ")
         file = open(input(), "r")
         text = file.read()
