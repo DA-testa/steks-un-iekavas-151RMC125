@@ -28,13 +28,19 @@ def find_mismatch(text):
         return opening_brackets_stack[0].position
 
 
-def main():
-    text = input()
+def main(text):
     mismatch = find_mismatch(text)
     # Printing answer, write your code here
     print(mismatch)
 
 
 if __name__ == "__main__":
-    if input().startswith("I"):
-        main()
+    in_met = input("Input method: ")
+    if in_met == "I":
+        text = input()
+        main(text)
+    elif in_met == "F":
+        file = open(input("File path: "), "r")
+        text = file.read()
+        main(text)
+        file.close()
