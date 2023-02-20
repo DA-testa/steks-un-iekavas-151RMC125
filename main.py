@@ -28,12 +28,15 @@ def find_mismatch(text):
         return opening_brackets_stack[0].position
 
 
-def main():
-    text = input()
+def main(x):
+    text = x
     mismatch = find_mismatch(text)
     # Printing answer, write your code here
     print(mismatch)
 
 
 if __name__ == "__main__":
-    main()
+    ievads = input()
+    if ievads[0] == "I":
+        x = ievads.strip("I\\r\\n")
+        main(x)
