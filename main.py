@@ -35,12 +35,14 @@ def main(text):
 
 
 if __name__ == "__main__":
-    in_met = input("Input method: ")
+    print("Input method: ")
+    in_met = input()
     if in_met == "I":
         text = input()
         main(text)
     elif in_met == "F":
-        file = open(input("File path: "), "r")
+        print("File path: ")
+        file = open(input(), "r")
         text = file.read()
         main(text)
         file.close()
